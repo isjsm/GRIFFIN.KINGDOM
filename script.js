@@ -224,7 +224,7 @@ function showPreloader() {
     preloader.innerHTML = `
         <div class="preloader-content">
             <div class="griffin-logo">🐦‍🔥</div>
-            <div class="loading-text">جاري تحميل مملكة Griffin...</div>
+            <div class="loading-text">جاري تحميل فتح موقع مملكة Griffin...</div>
             <div class="loading-bar">
                 <div class="loading-progress"></div>
             </div>
