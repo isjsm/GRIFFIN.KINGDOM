@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>❲ مـمـلـڪـة ❳❲ 🐦‍🔥 GRIFFIN ❳</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo" onclick="scrollToTop()">Griffin</div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#story" class="nav-link" onclick="scrollToSection('story')">« قـصـتـنـا »</a>
+                <a href="#hierarchy" class="nav-link" onclick="scrollToSection('hierarchy')">⦗ التسلسل الهرمي ⦘</a>
+                <a href="#features" class="nav-link" onclick="scrollToSection('features')">⦗ مــيــزاتــنــا ⦘</a>
+                <a href="#branches" class="nav-link" onclick="scrollToSection('branches')">⦗ فـروعـنـا ⦘</a>
+                <a href="#more" class="nav-link" onclick="scrollToSection('more')">⇙ الــمــزيــد ⇙</a>
+            </div>
+            <div class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars" id="menu-icon"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <div class="logo-container">
+                <img src="https://via.placeholder.com/600x300/ff0000/ffffff?text=Griffin+Logo" alt="Griffin Logo" class="hero-logo">
+            </div>
+            <h1 class="hero-title">❲ مـمـلـڪـة ❳</h1>
+            <h2 class="hero-subtitle">❲ 🐦‍🔥 GRIFFIN ❳</h2>
+            <p class="hero-description">
+                مـمـلـڪـة فـي مـمـكـان تـجـمـع عـشـاق الأنـمـي و الـمـانـجـا مـن جـمـيـع أنـحـاء
+            </p>
+            <p class="hero-subdescription">
+                الـعـالـم وقـدمـة الـمـمـلـكـة تـضـم إلـى عـدة فـروعـات "تـمـيـل بـكـل ثـقـافـات"
+            </p>
+            <button class="hero-btn" onclick="scrollToSection('story')">⇙ قـصـتـنـا ⇙</button>
+            <div class="scroll-indicator">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section id="story" class="story">
+        <div class="container">
+            <h2 class="section-title">⥣قــصـتـنـا⥥</h2>
+            <div class="story-content">
+                <p>
+                    كان بداية مملڪة غريفين بأنشاء نقابة تدعى دايف في 2024/6/16 انشئها موساشي بل تعاون مع تايها وباقي المسؤولين بغرض التسليا وسرعان ما ازهدرت مع دعم المشرفين والإداريين تم إصدار قرار ببناء مملڪة عريقة مترفة والتي هي الآن غريفين وتم الاتفاق على أهداف محدودة مُعينة لزيادة نفوذها وقوتها وحتى الآن تتربع 5 نقابات تحت جناح غريفين.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hierarchy Section -->
+    <section id="hierarchy" class="hierarchy">
+        <div class="container">
+            <h2 class="section-title">⦗ التسلسل الهرمي للمملكة ⦘</h2>
+            
+            <!-- الإمبراطور -->
+            <div class="rank-section">
+                <div class="rank-header emperor">
+                    <i class="fas fa-crown"></i>
+                    <div>
+                        <h3>الإمبراطور</h3>
+                        <p>EMPEROR</p>
+                    </div>
+                </div>
+                <div class="members-grid single">
+                    <div class="member-card">
+                        <img src="https://via.placeholder.com/150x150/ffd700/000000?text=موساشي" alt="موساشي">
+                        <h4>⤣ موساشي ⤥</h4>
+                        <p class="member-title">إمبراطور مملكة Griffin</p>
+                        <p class="member-desc">القائد الأعلى والمؤسس الأول للمملكة</p>
+                        <button class="member-btn" onclick="openLink('https://example.com/emperor')">
+                            <i class="fas fa-external-link-alt"></i> زيارة الصفحة
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- النائب -->
+            <div class="rank-section">
+                <div class="rank-header deputy">
+                    <i class="fas fa-gem"></i>
+                    <div>
+                        <h3>النائب</h3>
+                        <p>DEPUTY</p>
+                    </div>
+                </div>
+                <div class="members-grid single">
+                    <div class="member-card">
+                        <img src="https://via.placeholder.com/150x150/9333ea/ffffff?text=تايها" alt="تايها">
+                        <h4>⤣ تايها ⤥</h4>
+                        <p class="member-title">نائب الإمبراطور</p>
+                        <p class="member-desc">اليد اليمنى للإمبراطور ومساعده الأول</p>
+                        <button class="member-btn" onclick="openLink('https://example.com/deputy')">
+                            <i class="fas fa-external-link-alt"></i> زيارة الصفحة
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- الشوغن -->
+            <div class="rank-section">
+                <div class="rank-header shogun">
+                    <i class="fas fa-sword"></i>
+                    <div>
+                        <h3>الشوغن ورئيس النظام الملكي</h3>
+                        <p>SHOGUN & ROYAL SYSTEM HEAD</p>
+                    </div>
+                </div>
+                <div class="members-grid single">
+                    <div class="member-card">
+                        <img src="https://via.placeholder.com/150x150/dc2626/ffffff?text=كازوها" alt="كازوها">
+                        <h4>⤣ كازوها ⤥</h4>
+                        <p class="member-title">الشوغن الأعظم</p>
+                        <p class="member-desc">قائد النظام الملكي ومدير العمليات الاستراتيجية</p>
+                        <button class="member-btn" onclick="openLink('https://example.com/shogun')">
+                            <i class="fas fa-external-link-alt"></i> زيارة الصفحة
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- اللورد -->
+            <div class="rank-section">
+                <div class="rank-header lord">
+                    <i class="fas fa-shield-alt"></i>
+                    <div>
+                        <h3>اللورد</h3>
+                        <p>LORD</p>
+                    </div>
+                </div>
+                <div class="members-grid single">
+                    <div class="member-card">
+                        <img src="https://via.placeholder.com/150x150/2563eb/ffffff?text=أكاشي" alt="أكاشي">
+                        <h4>⤣ أكاشي ⤥</h4>
+                        <p class="member-title">لورد المملكة</p>
+                        <p class="member-desc">حاكم الأقاليم ومدير الشؤون الداخلية</p>
+                        <button class="member-btn" onclick="openLink('https://example.com/lord')">
+                            <i class="fas fa-external-link-alt"></i> زيارة الصفحة
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- نواب اللورد -->
+            <div class="rank-section">
+                <div class="rank-header lord-deputy">
+                    <i class="fas fa-award"></i>
+                    <div>
+                        <h3>نواب اللورد</h3>
+                        <p>LORD DEPUTIES</p>
+                    </div>
+                </div>
+                <div class="members-grid double">
+                    <div class="member-card">
+                        <img src="https://via.placeholder.com/150x150/06b6d4/ffffff?text=ساكورا" alt="ساكورا">
+                        <h4>⤣ ساكورا ⤥</h4>
+                        <p class="member-title">نائب اللورد الأول</p>
+                        <p class="member-desc">مساعد اللورد في إدارة الشؤون الإقليمية</p>
+                        <button class="member-btn" onclick="openLink('https://example.com/lordDeputy1')">
+                            <i class="fas fa-external-link-alt"></i> زيارة الصفحة
+                        </button>
+                    </div>
+                    <div class="member-card">
+                        <img src="https://via.placeholder.com/150x150/06b6d4/ffffff?text=هيناتا" alt="هيناتا">
+                        <h4>⤣ هيناتا ⤥</h4>
+                        <p class="member-title">نائب اللورد الثاني</p>
+                        <p class="member-desc">مسؤول عن التنسيق بين الأقاليم المختلفة</p>
+                        <button class="member-btn" onclick="openLink('https://example.com/lordDeputy2')">
+                            <i class="fas fa-external-link-alt"></i> زيارة الصفحة
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- اليونكو -->
+            <div class="rank-section">
+                <div class="rank-header yonko">
+                    <i class="fas fa-bolt"></i>
+                    <div>
+                        <h3>اليونكو</h3>
+                        <p>YONKO</p>
+                    </div>
+                </div>
+                <div class="members-grid yonko">
+                    <div class="member-card">
+                        <img src="https://via.placeholder.com/150x150/ea580c/ffffff?text=لوفي" alt="لوفي">
+                        <h4>⤣ لوفي ⤥</h4>
+                        <p class="member-title">يونكو البحار الشرقية</p>
+                        <p class="member-desc">قائد الأساطيل البحرية وحامي الحدود الشرقية</p>
+                        <button class="member-btn" onclick="openLink('https://example.com/yonko1')">
+                            <i class="fas fa-external-link-alt"></i> زيارة الصفحة
+                        </button>
+                    </div>
+                    <div class="member-card">
+                        <img src="https://via.placeholder.com/150x150/ea580c/ffffff?text=زورو" alt="زورو">
+                        <h4>⤣ زورو ⤥</h4>
+                        <p class="member-title">يونكو الأراضي الشمالية</p>
+                        <p class="member-desc">محارب الظلال وحارس الحدود الشمالية</p>
+                        <button class="member-btn" onclick="openLink('https://example.com/yonko2')">
+                            <i class="fas fa-external-link-alt"></i> زيارة الصفحة
+                        </button>
+                    </div>
+                    <div class="member-card">
+                        <img src="https://via.placeholder.com/150x150/ea580c/ffffff?text=سانجي" alt="سانجي">
+                        <h4>⤣ سانجي ⤥</h4>
+                        <p class="member-title">يونكو المناطق الغربية</p>
+                        <p class="member-desc">استراتيجي المعارك ومدير العمليات الغربية</p>
+                        <button class="member-btn" onclick="openLink('https://example.com/yonko3')">
+                            <i class="fas fa-external-link-alt"></i> زيارة الصفحة
+                        </button>
+                    </div>
+                    <div class="member-card">
+                        <img src="https://via.placeholder.com/150x150/ea580c/ffffff?text=نامي" alt="نامي">
+                        <h4>⤣ نامي ⤥</h4>
+                        <p class="member-title">نائب يونكو البحار</p>
+                        <p class="member-desc">خبيرة الملاحة ومساعدة قائد الأساطيل</p>
+                        <button class="member-btn" onclick="openLink('https://example.com/yonkoDeputy1')">
+                            <i class="fas fa-external-link-alt"></i> زيارة الصفحة
+                        </button>
+                    </div>
+                    <div class="member-card">
+                        <img src="https://via.placeholder.com/150x150/ea580c/ffffff?text=روبن" alt="روبن">
+                        <h4>⤣ روبن ⤥</h4>
+                        <p class="member-title">نائب يونكو الاستخبارات</p>
+                        <p class="member-desc">محللة المعلومات وخبيرة الاستراتيجيات</p>
+                        <button class="member-btn" onclick="openLink('https://example.com/yonkoDeputy2')">
+                            <i class="fas fa-external-link-alt"></i> زيارة الصفحة
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- الدوق -->
+            <div class="rank-section">
+                <div class="rank-header duke">
+                    <i class="fas fa-trophy"></i>
+                    <div>
+                        <h3>الدوق</h3>
+                        <p>DUKE</p>
+                    </div>
+                </div>
+                <div class="members-grid triple">
+                    <div class="member-card">
+                        <img src="https://via.placeholder.com/150x150/16a34a/ffffff?text=إيتشيغو" alt="إيتشيغو">
+                        <h4>⤣ إيتشيغو ⤥</h4>
+                        <p class="member-title">دوق المملكة</p>
+                        <p class="member-desc">حاكم المقاطعات ومدير الشؤون المحلية</p>
+                        <button class="member-btn" onclick="openLink('https://example.com/duke')">
+                            <i class="fas fa-external-link-alt"></i> زيارة الصفحة
+                        </button>
+                    </div>
+                    <div class="member-card">
+                        <img src="https://via.placeholder.com/150x150/16a34a/ffffff?text=أوريهيمي" alt="أوريهيمي">
+                        <h4>⤣ أوريهيمي ⤥</h4>
+                        <p class="member-title">نائب الدوق الأول</p>
+                        <p class="member-desc">مسؤولة عن الشؤون الاجتماعية والثقافية</p>
+                        <button class="member-btn" onclick="openLink('https://example.com/dukeDeputy1')">
+                            <i class="fas fa-external-link-alt"></i> زيارة الصفحة
+                        </button>
+                    </div>
+                    <div class="member-card">
+                        <img src="https://via.placeholder.com/150x150/16a34a/ffffff?text=تشاد" alt="تشاد">
+                        <h4>⤣ تشاد ⤥</h4>
+                        <p class="member-title">نائب الدوق الثاني</p>
+                        <p class="member-desc">مدير العلاقات العامة والاتصالات</p>
+                        <button class="member-btn" onclick="openLink('https://example.com/dukeDeputy2')">
+                            <i class="fas fa-external-link-alt"></i> زيارة الصفحة
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- الأدميرالات -->
+            <div class="rank-section">
+                <div class="rank-header admiral">
+                    <i class="fas fa-anchor"></i>
+                    <div>
+                        <h3>الأدميرالات</h3>
+                        <p>ADMIRALS</p>
+                    </div>
+                </div>
+                <div class="members-grid triple">
+                    <div class="member-card">
+                        <img src="https://via.placeholder.com/150x150/0d9488/ffffff?text=نيمار" alt="نيمار">
+                        <h4>⤣ نيمار ⤥</h4>
+                        <p class="member-title">أدميرال الأسطول الأول</p>
+                        <p class="member-desc">قائد القوات البحرية وحامي المياه الإقليمية</p>
+                        <button class="member-btn" onclick="openLink('https://example.com/admiral1')">
+                            <i class="fas fa-external-link-alt"></i> زيارة الصفحة
+                        </button>
+                    </div>
+                    <div class="member-card">
+                        <img src="https://via.placeholder.com/150x150/0d9488/ffffff?text=كريستيانو" alt="كريستيانو">
+                        <h4>⤣ كريستيانو ⤥</h4>
+                        <p class="member-title">أدميرال الأسطول الثاني</p>
+                        <p class="member-desc">خبير التكتيكات البحرية ومدير العمليات الخاصة</p>
+                        <button class="member-btn" onclick="openLink('https://example.com/admiral2')">
+                            <i class="fas fa-external-link-alt"></i> زيارة الصفحة
+                        </button>
+                    </div>
+                    <div class="member-card">
+                        <img src="https://via.placeholder.com/150x150/0d9488/ffffff?text=ميسي" alt="ميسي">
+                        <h4>⤣ ميسي ⤥</h4>
+                        <p class="member-title">أدميرال الأسطول الثالث</p>
+                        <p class="member-desc">استراتيجي الدفاع البحري ومنسق التحالفات</p>
+                        <button class="member-btn" onclick="openLink('https://example.com/admiral3')">
+                            <i class="fas fa-external-link-alt"></i> زيارة الصفحة
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">⦗ مــيــزاتــنــا ⦘</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>أسـتـمـارتـنـا</h3>
+                    <p>نظام متطور لإدارة الطلبات والاستمارات</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-crown"></i>
+                    <h3>نـظـامـنـا</h3>
+                    <p>نظام إدارة شامل ومتقدم للمملكة</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-store"></i>
+                    <h3>مـتـجـرنـا</h3>
+                    <p>متجر رقمي متكامل لجميع احتياجاتك</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Branches Section -->
+    <section id="branches" class="branches">
+        <div class="container">
+            <h2 class="section-title">⦗ فـروعـنـا ⦘</h2>
+            <div class="branches-grid">
+                <div class="branch-card" onclick="openLink('https://example.com/banks')">
+                    <img src="https://via.placeholder.com/300x200/2563eb/ffffff?text=البنوك" alt="البنوك">
+                    <h3>╎الــبــنــوك✓ BANKS╎</h3>
+                    <p>حـيـث عـرض ثـروات واحـصـائـيـات الـمـملـكـة ومـيـزانـيـات</p>
+                    <button class="branch-btn" onclick="event.stopPropagation(); openLink('https://example.com/banks')">
+                        <i class="fas fa-external-link-alt"></i> زيارة الفرع
+                    </button>
+                </div>
+                <div class="branch-card" onclick="openLink('https://example.com/news')">
+                    <img src="https://via.placeholder.com/300x200/16a34a/ffffff?text=الأخبار" alt="الأخبار">
+                    <h3>╎اخبار✓ NEWS╎</h3>
+                    <p>تـقـديـم جـمـيـع انـواع الأخـبـار والـتـسـريـبـات الـتـي تـخـص الانـمـي و الـمـانـجـا بـأفـضـل الـطـرق</p>
+                    <button class="branch-btn" onclick="event.stopPropagation(); openLink('https://example.com/news')">
+                        <i class="fas fa-external-link-alt"></i> زيارة الفرع
+                    </button>
+                </div>
+                <div class="branch-card" onclick="openLink('https://example.com/contests')">
+                    <img src="https://via.placeholder.com/300x200/9333ea/ffffff?text=المسابقات" alt="المسابقات">
+                    <h3>╎مــســابــقــات✓ CONTESTS╎</h3>
+                    <p>تـقـديـم الـكـثـيـر مـن الـتـحـديـات والـمـنـافـسـات الـمـخـتـلـفـة والـمـثـيـرة</p>
+                    <button class="branch-btn" onclick="event.stopPropagation(); openLink('https://example.com/contests')">
+                        <i class="fas fa-external-link-alt"></i> زيارة الفرع
+                    </button>
+                </div>
+                <div class="branch-card" onclick="openLink('https://example.com/novels')">
+                    <img src="https://via.placeholder.com/300x200/dc2626/ffffff?text=الروايات" alt="الروايات">
+                    <h3>╎روايات✓ NOVELS╎</h3>
+                    <p>مـشـاركـة يـومـيـة للـروايـات والـقـصـص بـمـخـتـلـف فـئـاتـهـا</p>
+                    <button class="branch-btn" onclick="event.stopPropagation(); openLink('https://example.com/novels')">
+                        <i class="fas fa-external-link-alt"></i> زيارة الفرع
+                    </button>
+                </div>
+                <div class="branch-card" onclick="openLink('https://example.com/gaming')">
+                    <img src="https://via.placeholder.com/300x200/ea580c/ffffff?text=الغيمينغ" alt="الغيمينغ">
+                    <h3>╎غـيـمـيـنـغ✓ GAMING╎</h3>
+                    <p>تـحـديـات ونـزالات كـبـيـرة بـمـخـتـلـف أنـواع الالـعـاب وفـرق مـتـنـفـاسـة قـويـة</p>
+                    <button class="branch-btn" onclick="event.stopPropagation(); openLink('https://example.com/gaming')">
+                        <i class="fas fa-external-link-alt"></i> زيارة الفرع
+                    </button>
+                </div>
+                <div class="branch-card" onclick="openLink('https://example.com/sports')">
+                    <img src="https://via.placeholder.com/300x200/0d9488/ffffff?text=الرياضي" alt="الرياضي">
+                    <h3>╎الـريـاضـي✓ SPORTS╎</h3>
+                    <p>مـتـابـعـة جـمـيـع اخـبـار الـريـاضـات وتـقـديـم الـكـثـيـر مـن الـنـصـائـح للـريـاضـيـيـن مـن قـبـل الـخـبـراء فـي الـمـجـال</p>
+                    <button class="branch-btn" onclick="event.stopPropagation(); openLink('https://example.com/sports')">
+                        <i class="fas fa-external-link-alt"></i> زيارة الفرع
+                    </button>
+                </div>
+                <div class="branch-card" onclick="openLink('https://example.com/interviews')">
+                    <img src="https://via.placeholder.com/300x200/ec4899/ffffff?text=المقابلات" alt="المقابلات">
+                    <h3>╎مـقـابـلات✓ INTERVIEWS╎</h3>
+                    <p>مـقابـلات ولـقـاءات مـع كـبـار الـشـخـصـيـات وغـيـرهـم وطـرح الـكـثـيـر مـن الأسـئـلـة والـنـصـائـح</p>
+                    <button class="branch-btn" onclick="event.stopPropagation(); openLink('https://example.com/interviews')">
+                        <i class="fas fa-external-link-alt"></i> زيارة الفرع
+                    </button>
+                </div>
+                <div class="branch-card" onclick="openLink('https://example.com/stickers')">
+                    <img src="https://via.placeholder.com/300x200/6366f1/ffffff?text=الستيكرات" alt="الستيكرات">
+                    <h3>╎الـسـتـڪـرات✓ STICKERS╎</h3>
+                    <p>يـقـدم لـك شـتـى الـمـلـصـقـات والـثـابـتـة والـمـتـحـركـة مـن انـمـيـات وافـلام وصـور افـاتـارات</p>
+                    <button class="branch-btn" onclick="event.stopPropagation(); openLink('https://example.com/stickers')">
+                        <i class="fas fa-external-link-alt"></i> زيارة الفرع
+                    </button>
+                </div>
+                <div class="branch-card" onclick="openLink('https://example.com/islamic')">
+                    <img src="https://via.placeholder.com/300x200/059669/ffffff?text=الإسلامي" alt="الإسلامي">
+                    <h3>╎الإســلامــي✓ ISLAMIC╎</h3>
+                    <p>نـشـر الـتـوعـيـة الإسـلامـيـة وتـقـديـم الأحـاديـث الـنـبـويـة الـشـريـفـة ونـشـر الأذكـار والأدعـيـة الـيـومـيـة وغـيـرهـا</p>
+                    <button class="branch-btn" onclick="event.stopPropagation(); openLink('https://example.com/islamic')">
+                        <i class="fas fa-external-link-alt"></i> زيارة الفرع
+                    </button>
+                </div>
+                <div class="branch-card" onclick="openLink('https://example.com/memes')">
+                    <img src="https://via.placeholder.com/300x200/eab308/000000?text=الميمز" alt="الميمز">
+                    <h3>╎الميمز✓ MEMES╎</h3>
+                    <p>ضـحـك وتـرفـيـه طـوال الـيـوم مـع الـمـشـرفـيـن وأعـضـاء والـمـمـلـكـة بـمـشـاركـة أفـكـارهـم الـمـضـحـكـة , هـيـا لـنـبـتـسـم.</p>
+                    <button class="branch-btn" onclick="event.stopPropagation(); openLink('https://example.com/memes')">
+                        <i class="fas fa-external-link-alt"></i> زيارة الفرع
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section id="more" class="stats">
+        <div class="container">
+            <h2 class="section-title">⦗ احـصـائـيـاتـنـا ⦘</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <i class="fas fa-users"></i>
+                    <div class="stat-number">350+</div>
+                    <p>عـدد اعـضـاء الـصـحـيـفـة</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-crown"></i>
+                    <div class="stat-number">973+</div>
+                    <p>أجـمـالـي اعـضـاء الـمـمـلـكـة</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <div class="stat-number">5</div>
+                    <p>عـدد الـنـقـابـات</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-star"></i>
+                    <div class="stat-number">15K</div>
+                    <p>مـتـوسـط الـتـفـاعـل</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final Message Section -->
+    <section class="final-message">
+        <div class="container">
+            <h2 class="section-title">رِسَـالَـتُـنَـا ༄</h2>
+            <div class="message-content">
+                <p>
+                    نـود أن نـشـڪـر كـل مـن زار مـوقـتـنـا ونـتـمـنـى أن نـفـوق الـتـوقـعـات ونـتـطـلـع إلى مـبـادراتـڪـم ودعـمـڪـم لنا .
+                </p>
+                <p>
+                    مــع تحـيـاتـي مـمـلـڪـة🐦‍🔥 GRIFFIN
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" onclick="scrollToTop()">
+        ⇈الــعــودة للــبــدايــة⇈
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>جميع الحقوق محفوظة - مملكة Griffin © 2024</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
