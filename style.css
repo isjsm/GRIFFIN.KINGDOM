@@ -262,18 +262,32 @@ section {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-/* Hierarchy Section */
+/* Unified Hierarchy Section */
 .hierarchy {
     background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
 }
 
-.rank-section {
-    margin-bottom: 60px;
+.unified-hierarchy {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.hierarchy-level {
     background: rgba(255, 255, 255, 0.05);
-    border-radius: 20px;
+    border-radius: 25px;
     padding: 30px;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.hierarchy-level:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.08);
 }
 
 .rank-header {
@@ -284,6 +298,7 @@ section {
     padding: 20px;
     border-radius: 15px;
     color: white;
+    transition: all 0.3s ease;
 }
 
 .rank-header.emperor { background: linear-gradient(45deg, #ffd700, #ffed4e); color: #000; }
@@ -293,32 +308,40 @@ section {
 .rank-header.lord-deputy { background: linear-gradient(45deg, #06b6d4, #67e8f9); }
 .rank-header.yonko { background: linear-gradient(45deg, #ea580c, #fb923c); }
 .rank-header.duke { background: linear-gradient(45deg, #16a34a, #4ade80); }
+.rank-header.baron { background: linear-gradient(45deg, #8b5cf6, #a78bfa); }
 .rank-header.admiral { background: linear-gradient(45deg, #0d9488, #2dd4bf); }
 
+.rank-header:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
 .rank-header i {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    animation: iconGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes iconGlow {
+    from { text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); }
+    to { text-shadow: 0 0 20px rgba(255, 255, 255, 0.8); }
 }
 
 .rank-header h3 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     margin-bottom: 5px;
 }
 
 .rank-header p {
-    font-size: 1rem;
-    opacity: 0.8;
+    font-size: 1.1rem;
+    opacity: 0.9;
 }
 
-.members-grid {
+.level-members {
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     justify-items: center;
 }
-
-.members-grid.single { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
-.members-grid.double { grid-template-columns: repeat(2, 1fr); max-width: 800px; margin: 0 auto; }
-.members-grid.triple { grid-template-columns: repeat(3, 1fr); }
-.members-grid.yonko { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
 
 .member-card {
     background: rgba(255, 255, 255, 0.1);
@@ -330,10 +353,27 @@ section {
     backdrop-filter: blur(10px);
     width: 100%;
     max-width: 350px;
+    position: relative;
+    overflow: hidden;
+}
+
+.member-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.member-card:hover::before {
+    left: 100%;
 }
 
 .member-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-10px) scale(1.02);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
     background: rgba(255, 255, 255, 0.15);
 }
@@ -345,17 +385,20 @@ section {
     margin-bottom: 20px;
     border: 3px solid rgba(255, 255, 255, 0.3);
     transition: all 0.3s ease;
+    object-fit: cover;
 }
 
 .member-card:hover img {
     transform: scale(1.1);
     border-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
 }
 
 .member-card h4 {
     font-size: 1.5rem;
     color: #fff;
     margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .member-title {
@@ -363,6 +406,7 @@ section {
     color: #4ecdc4;
     margin-bottom: 10px;
     font-weight: 600;
+    text-shadow: 0 0 10px rgba(78, 205, 196, 0.3);
 }
 
 .member-desc {
@@ -376,16 +420,18 @@ section {
     background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 12px 25px;
     border-radius: 25px;
     cursor: pointer;
     transition: all 0.3s ease;
     font-size: 0.9rem;
+    position: relative;
+    overflow: hidden;
 }
 
 .member-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+    box-shadow: 0 8px 20px rgba(255, 107, 107, 0.4);
 }
 
 /* Features Section */
@@ -433,12 +479,12 @@ section {
     line-height: 1.6;
 }
 
-/* Branches Section */
+/* Unified Branches Section */
 .branches {
     background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
 }
 
-.branches-grid {
+.unified-branches {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 30px;
@@ -453,10 +499,28 @@ section {
     border: 1px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
     cursor: pointer;
+    position: relative;
+}
+
+.branch-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255, 107, 107, 0.1), rgba(78, 205, 196, 0.1));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.branch-card:hover::before {
+    opacity: 1;
 }
 
 .branch-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-10px) scale(1.02);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
     background: rgba(255, 255, 255, 0.15);
 }
@@ -477,6 +541,8 @@ section {
     color: #fff;
     padding: 20px 20px 10px;
     text-align: center;
+    position: relative;
+    z-index: 2;
 }
 
 .branch-card p {
@@ -484,6 +550,8 @@ section {
     padding: 0 20px;
     line-height: 1.6;
     text-align: center;
+    position: relative;
+    z-index: 2;
 }
 
 .branch-btn {
@@ -497,6 +565,8 @@ section {
     margin: 20px;
     width: calc(100% - 40px);
     font-size: 1rem;
+    position: relative;
+    z-index: 2;
 }
 
 .branch-btn:hover {
@@ -657,14 +727,19 @@ section {
         font-size: 2rem;
     }
 
-    .members-grid.double,
-    .members-grid.triple,
-    .members-grid.yonko {
+    .unified-hierarchy {
+        gap: 30px;
+    }
+
+    .level-members {
+        grid-template-columns: 1fr;
+    }
+
+    .unified-branches {
         grid-template-columns: 1fr;
     }
 
     .features-grid,
-    .branches-grid,
     .stats-grid {
         grid-template-columns: 1fr;
     }
@@ -675,6 +750,14 @@ section {
 
     section {
         padding: 60px 0;
+    }
+
+    .rank-header h3 {
+        font-size: 1.5rem;
+    }
+
+    .rank-header p {
+        font-size: 0.9rem;
     }
 }
 
@@ -697,6 +780,19 @@ section {
         padding: 12px 20px;
         font-size: 0.9rem;
     }
+
+    .hierarchy-level {
+        padding: 20px;
+    }
+
+    .rank-header {
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .rank-header i {
+        font-size: 2rem;
+    }
 }
 
 /* Smooth Scrolling */
@@ -713,4 +809,26 @@ html {
 
 .loading {
     animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Special Effects */
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(0);
+    animation: ripple-animation 0.6s linear;
+    pointer-events: none;
+}
+
+@keyframes ripple-animation {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+.hero-btn, .member-btn, .branch-btn {
+    position: relative;
+    overflow: hidden;
 }
